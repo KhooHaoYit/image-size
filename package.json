@@ -1,0 +1,44 @@
+{
+	"name": "@khoohaoyit/image-size",
+	"version": "0.0.1",
+	"description": "A stream based solution of [image-size](https://github.com/image-size/image-size)",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"directories": {
+		"lib": "lib",
+		"test": "tests"
+	},
+	"scripts": {
+		"build": "rimraf dist && tsc",
+		"prepack": "pnpm build"
+	},
+	"keywords": [
+		"image",
+		"size",
+		"dimentions",
+		"resolution",
+		"width",
+		"height",
+		"stream"
+	],
+	"author": "KhooHaoYit",
+	"license": "MIT",
+	"homepage": "https://github.com/KhooHaoYit/image-size#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KhooHaoYit/image-size.git"
+	},
+	"bugs": {
+		"url": "https://github.com/KhooHaoYit/image-size/issues"
+	},
+	"devDependencies": {
+		"@types/node": "^20.8.8",
+		"image-size": "^1.0.2",
+		"rimraf": "^5.0.5",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.2.2"
+	}
+}
