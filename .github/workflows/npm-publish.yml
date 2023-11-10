@@ -19,7 +19,7 @@ jobs:
           version: 8
           run_install: |
             - args: [--frozen-lockfile]
-      - run: pnpm publish --access public
+      - run: pnpm publish --no-git-checks --access public
         name: Publish package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
