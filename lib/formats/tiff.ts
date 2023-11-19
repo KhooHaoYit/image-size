@@ -63,4 +63,8 @@ tiff ifd format
  -> https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=1099&strPageToDisplay=summary
  -> https://web.archive.org/web/20211031081158/https://www.adobe.io/content/dam/udp/en/open/standards/tiff/TIFF6.pdf
 
+nef??
+http://lclevy.free.fr/nef
+https://exiftool.org/TagNames/EXIF.html
+
 */

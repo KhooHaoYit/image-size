@@ -4,6 +4,7 @@ import {
   extractCurSize,
   extractIcoSize,
 } from "./[ico,cur]";
+import { extractAvifSize, extractHeicSize, extractHeifSize } from "./[avif,heic,heif]";
 import { extractBmpSize } from "./bmp";
 import { extractDdsSize } from "./dds";
 import { extractGifSize } from "./gif";
@@ -21,6 +22,10 @@ import { extractTiffSize } from "./tiff";
 import { extractWebpSize } from "./webp";
 
 export const formats = <const>[
+  ['avif', extractAvifSize],
+  ['heic', extractHeicSize],
+  ['heif', extractHeifSize],
+
   ['ico', extractIcoSize],
   ['cur', extractCurSize],
 

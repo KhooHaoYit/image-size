@@ -78,9 +78,9 @@ console.log(extractor.sizes);
 | `ktx`  | Yes | No | Yes |
 | `pnm`  | Yes | No | Yes |
 | `tga`  | Yes | No | Yes |
-| `avif` | No | Yes | No |
-| `heic` | No | Yes | No |
-| `heif` | No | Yes | No |
+| `avif` | Yes | Yes | No |
+| `heic` | Yes | Yes | No |
+| `heif` | Yes | Yes | No |
 
 The listed library on top all supports `ico`, `cur`, `bmp`, `gif`, `jpg`, `png`, `psd`, `svg`, `tiff`, and `webp`
 

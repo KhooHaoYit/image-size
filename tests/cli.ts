@@ -1,6 +1,7 @@
 import { createReadStream } from "fs";
 import { pipeline } from "stream/promises";
 import { SizeExtractor } from "../lib/utils/sizeExtractor";
+import probe from 'probe-image-size';
 
 if (process.argv.length < 3) {
   console.error('Please provide an image path');
@@ -10,7 +11,7 @@ if (process.argv.length < 3) {
 (async () => {
   for (const path of process.argv.slice(2)) {
     console.time(path);
-    const rs = createReadStream(path, { highWaterMark: 1 });
+    const rs = createReadStream(path); // { highWaterMark: 1 }
     const controller = new AbortController;
     let gotSize = false;
     await pipeline(
@@ -29,6 +30,10 @@ if (process.argv.length < 3) {
         return;
       throw err;
     });
+    console.timeEnd(path);
+    console.time(path);
+    const result = await probe(createReadStream(path));
+    console.log(result);
     console.timeEnd(path);
   }
 })();
